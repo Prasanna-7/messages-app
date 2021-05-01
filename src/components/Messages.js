@@ -46,11 +46,24 @@ class Messages extends Component {
         this.setState({loading: isLoading})
     }
 
+    onDeleteClicked = (id) => {
+        let messages = [...this.state.messages]
+        const messageIndexToDelete = messages.findIndex((message) => message.id === id)
+        messages.splice(messageIndexToDelete, 1)
+        this.setState({messages: messages})
+    }
+
     render() {
         return (
             <div className="messages">
                 {
-                    this.state.messages.map((message) => <Message key={message.id} message={message}></Message>)
+                    this.state.messages.map((message) => (
+                            <Message key={message.id}
+                                id={message.id}
+                                message={message}
+                                onDeleteClicked={this.onDeleteClicked}></Message>
+                        )    
+                    )
                 }
                 <div ref={loadingRef => this.loadingRef = loadingRef}>
                     {
