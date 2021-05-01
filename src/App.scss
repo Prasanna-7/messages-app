@@ -1,0 +1,85 @@
+// COMMON
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.p-xs {
+    padding: 10px;
+}
+
+.p-l-xs {
+    padding-left: 10px;
+}
+
+.p-t-sm {
+    padding-top: 15px;
+}
+
+.p-t-xxs {
+    padding-top: 5px;
+}
+
+.p-l-m {
+    padding-left: 20px;
+} 
+
+.blue-shaded-bg {
+    background-color: rgb(89, 37, 233);
+}
+
+.white {
+    color: white;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+
+// SPECIFIC
+
+.messages {
+    padding: 20px;
+    background-color: whitesmoke;
+
+    .message {
+        padding: 20px 30px;
+        margin-bottom: 30px;
+        background-color: white;
+
+        .author-image {
+            border-radius: 50%;
+            height: 40px;
+        }
+
+        .author-name {
+            font-weight: 600;
+        }
+
+        .date {
+            color: #6b6b6e;
+            font-weight: 500;
+        }
+    }
+}
